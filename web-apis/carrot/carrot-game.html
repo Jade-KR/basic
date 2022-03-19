@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrot Game</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section class="wrap">
+        <div class="background">
+            <div class="background__top">
+                <audio src="./sound/bg.mp3" class="bgm"></audio>
+                <audio src="./sound/alert.wav" class="message"></audio>
+                <audio src="./sound/bug_pull.mp3" class="bug_pull"></audio>
+                <audio src="./sound/carrot_pull.mp3" class="carrot_pull"></audio>
+                <audio src="./sound/game_win.mp3" class="win"></audio>
+                <div class="background__top__timer">0:15</div>
+                <div class="background__top__flag">10</div>
+            </div>
+            <div class="background__bottom">
+                <div class="alert">
+                    <button class="control start"><i class="fas fa-play"></i></button>
+                    <div class="alert__message">Let's Start!</div>
+                </div>
+                <div class="area">
+                    <div class="carrots hidden"></div>
+                    <div class="carrots hidden"></div>
+                    <div class="carrots hidden"></div>
+                    <div class="carrots hidden"></div>
+                    <div class="carrots hidden"></div>
+                    <div class="carrots hidden"></div>
+                    <div class="carrots hidden"></div>
+                    <div class="carrots hidden"></div>
+                    <div class="carrots hidden"></div>
+                    <div class="carrots hidden"></div>
+                    <div class="bugs hidden"></div>
+                    <div class="bugs hidden"></div>
+                    <div class="bugs hidden"></div>
+                    <div class="bugs hidden"></div>
+                    <div class="bugs hidden"></div>
+                    <div class="bugs hidden"></div>
+                    <div class="bugs hidden"></div>
+                    <div class="bugs hidden"></div>
+                    <div class="bugs hidden"></div>
+                    <div class="bugs hidden"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="./main.js"></script>
+    <script src="https://kit.fontawesome.com/4d4aea4e3f.js" crossorigin="anonymous"></script>
+</body>
+</html>

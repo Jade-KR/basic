@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>motion</title>
+		<link rel="stylesheet" href="./style.css" />
+		<script src="./dist/main.js" defer></script>
+	</head>
+	<body>
+		<div class="modal__outer">
+			<div class="modal">
+				<div class="modal__header">
+					<div class="modal__close__btn">X</div>
+				</div>
+				<div class="modal__wrap">
+					<div class="modal__title">Title</div>
+					<input type="text" class="modal__title_input" />
+					<div class="modal__title">URL</div>
+					<input type="text" class="modal__content_input" />
+				</div>
+				<div class="modal__footer">
+					<button class="modal__submit_btn">add</button>
+				</div>
+			</div>
+		</div>
+		<header>
+			<div>Motion</div>
+			<div class="header__menus__wrapper">
+				<div class="header__menus" id="header__image__btn">IMAGE</div>
+				<div class="header__menus" id="header__video__btn">VIDEO</div>
+				<div class="header__menus" id="header__note__btn">NOTE</div>
+				<div class="header__menus" id="header__todo__btn">TODO</div>
+			</div>
+		</header>
+		<main>
+			<!-- <section></section> -->
+			<section class="section__media">
+				<div class="section__left">
+					<img src="https://picsum.photos/200/300" alt="" />
+				</div>
+				<div class="section__right">
+					<div class="section__title">hello</div>
+				</div>
+				<div class="section__close__btn">X</div>
+			</section>
+			<section class="section__media">
+				<div class="section__left">
+					<iframe
+						src="https://www.youtube.com/embed/BdspS4yb88k"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+					></iframe>
+				</div>
+				<div class="section__right">
+					<div class="section__title">hello</div>
+				</div>
+				<div class="section__close__btn">X</div>
+			</section>
+			<section class="section__text">
+				<div class="section__title">Note</div>
+				<div class="section__body">hello</div>
+			</section>
+			<section class="section__text">
+				<div class="section__title">Note</div>
+				<div class="section__body">hello</div>
+			</section>
+		</main>
+		<footer>@Copyright by Jade Kim. All rights reserved</footer>
+	</body>
+</html>
+
+<!-- 
+scrollbar styling
+
+ -->

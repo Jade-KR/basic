@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client vs Page</title>
+    <style>
+        .box {
+            background-color: bisque;
+            width: 400px;
+            height: 400px;
+            margin-bottom: 20px;
+        }
+        
+        .content {
+            position: fixed;
+            left: 500px;
+            top: 400px;
+        }
+`
+        .special {
+            background-color:darksalmon;
+            width: 400px;
+            height: 400px;
+            margin-bottom: 20px;
+        }
+        .menus {
+            margin-right: 10px;
+        }
+
+        .menu-wrapper {
+            position: fixed;
+            top: 0;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-wrapper">
+        <button class="menus" id="btn1">scroll by 100px</button>
+        <button class="menus" id="btn2">scroll to 400px</button>
+        <button class="menus" id="btn3">scroll to special</button>
+    </div>
+    <div class="content">특별한 상자를 찾아 클릭하세요</div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="special"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+    <script>
+        const special = document.querySelector('.special');
+        const content = document.querySelector('.content');
+        special.addEventListener('click', (e) => {
+            console.log(e.target.getBoundingClientRect());
+            content.innerHTML = `
+            target info: ${e.target.getBoundingClientRect()} <br/>
+            clientX: ${e.clientX}, clientY: ${e.clientY} <br/>
+            pageX: ${e.pageX}, pageY: ${e.pageY}
+            `
+        })
+
+        const btn1 = document.querySelector('#btn1');
+        const btn2 = document.querySelector('#btn2');
+        const btn3 = document.querySelector('#btn3');
+
+        console.log(special)
+
+        btn1.addEventListener('click', () => {
+            window.scrollBy(0, 100);
+        })
+
+        btn2.addEventListener('click', () => {
+            window.scrollTo(0, 400);
+        })
+
+        btn3.addEventListener('click', () => {
+            special.scrollIntoView({block: "center", behavior: "smooth"});
+        })
+    </script>
+</body>
+</html>
