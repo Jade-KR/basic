@@ -2,6 +2,7 @@ import "./app.css";
 import React, { useEffect, useState } from "react";
 import VideoList from "./components/video_list/video_list";
 import popular from "./popular.json";
+import Header from "./components/header/header";
 
 const App = (props) => {
 	const [videos, setVideos] = useState([]);
@@ -26,6 +27,7 @@ const App = (props) => {
 
 	return (
 		<>
+			<Header />
 			<VideoList videos={videos} />
 		</>
 	);

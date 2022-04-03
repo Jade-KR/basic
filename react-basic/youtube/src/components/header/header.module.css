@@ -1,0 +1,60 @@
+.header {
+	padding: 0px 16px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header_left {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.logo_wrap {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.hamburgers {
+	font-size: 1.5rem;
+}
+
+.logo {
+	margin-left: 1em;
+}
+
+.title {
+	color: black;
+	font-size: 2rem;
+	font-weight: 800;
+	margin-left: 0.2em;
+}
+
+.search_wrap {
+	display: flex;
+	width: 50vw;
+	height: 40px;
+}
+
+.search_wrap {
+}
+
+.search {
+	width: 100%;
+	padding-left: 20px;
+	border: rgb(227, 227, 227) 1px solid;
+	outline: none;
+}
+
+.submit {
+	background-color: rgb(249, 249, 249);
+	border: rgb(227, 227, 227) 1px solid;
+	cursor: pointer;
+}
+
+.search_img {
+	width: 80%;
+	height: 80%;
+}
