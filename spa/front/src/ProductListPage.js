@@ -1,15 +1,14 @@
-import ProductList from "./ProductList.js";
-import { request } from "./api.js";
+import { request } from "./request.js";
+import ProductList from "./productList.js";
 
 export default function ProductListPage({ $target }) {
-	const $page = document.createElement("div");
-	$page.className = "ProductListPage";
-
-	$page.innerHTML = "<h1>상품 목록</h1>";
-
+	const page = document.createElement("div");
+	page.className = "ProductListPage";
+	page.innerHTML = `
+                    <h1>상품목록</h1>
+                    `;
 	this.render = () => {
-		$target.appendChild($page);
-		$target.appendChild(productList);
+		$target.appendChild(page);
 	};
 
 	this.setState = (nextState) => {
@@ -17,14 +16,13 @@ export default function ProductListPage({ $target }) {
 	};
 
 	const fetchProducts = async () => {
-		const products = await request("/products");
+		const products = await request("products");
 		this.setState(products);
+		new ProductList({
+			$target: page,
+			initialState: this.state,
+		});
 	};
-
-	const productList = new ProductList({
-		$target: $page,
-		initialState: this.state,
-	});
 
 	fetchProducts();
 }

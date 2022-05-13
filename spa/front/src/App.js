@@ -1,30 +1,28 @@
-import CartPage from "./CartPage.js";
-import ProductDetailPage from "./ProductDetailPage.js";
-import ProductListPage from "./ProductListPage.js";
+import ProductListPage from "./productListPage.js";
+import ProductDetailPage from "./productDetailPage.js";
+import CartPage from "./cartPage.js";
+import { init } from "./router.js";
 
 export default function App({ $target }) {
 	this.route = () => {
 		const { pathname } = location;
 		$target.innerHTML = "";
-		console.log(pathname);
-
-		if (pathname === "/") {
-			// 상품 목록페이지 렌더링
+		if (pathname === "/web/") {
 			new ProductListPage({ $target }).render();
-		} else if (pathname.indexOf("/products/") === 0) {
-			// 상품 상세 페이지 렌더링
+		} else if (pathname.indexOf("/web/products/") === 0) {
 			const [, , , productId] = pathname.split("/");
 			new ProductDetailPage({
 				$target,
 				productId,
 			}).render();
-		} else if (pathname === "/cart") {
-			// 장바구니 페이지 렌더링
-			new CartPage({
-				$target,
-			}).render();
+		} else if (pathname === "/web/cart") {
+			new CartPage({ $target }).render();
 		}
 	};
+
+	init(this.route);
+
+	window.addEventListener("popstate", this.route);
 
 	this.route();
 }
