@@ -38,18 +38,22 @@
 	}
 
 	const Stack = new StackImpl<string>();
-	Stack.push("hello1");
-	Stack.push("hello2");
-	Stack.push("hello3");
-	Stack.push("hello4");
-
-	const StackNum = new StackImpl<number>();
-	StackNum.push(1);
-	StackNum.push(2);
-	StackNum.push(3);
-	StackNum.push(4);
+	Stack.push("Jade 1");
+	Stack.push("Jade 2");
+	Stack.push("Jade 3");
+	Stack.push("Jade 4");
 
 	while (Stack.size !== 0) {
 		console.log(Stack.pop());
+	}
+
+	const Stack2 = new StackImpl<number>();
+	Stack2.push(1);
+	Stack2.push(2);
+	Stack2.push(3);
+	Stack2.push(4);
+
+	while (Stack2.size !== 0) {
+		console.log(Stack2.pop());
 	}
 }

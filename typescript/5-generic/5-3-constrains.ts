@@ -54,6 +54,10 @@ console.log(getValue(obj2, "animal")); // 🐕
 // 	return obj[key];
 // }
 
+// function getValue<T, K extends keyof T>(obj: T, key: K): T[K] {
+// 	return obj[key];
+// }
+
 function getValue<T, K extends keyof T>(obj: T, key: K): T[K] {
 	return obj[key];
 }
