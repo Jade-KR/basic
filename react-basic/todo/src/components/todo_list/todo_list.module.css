@@ -1,0 +1,15 @@
+.todo_list {
+	flex: 1 1 90%;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.list {
+	flex: 0 0 90%;
+	overflow-y: scroll;
+}
+
+.add_todo {
+	flex: 1 0 10%;
+}
